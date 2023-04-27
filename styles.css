@@ -63,7 +63,7 @@ body {
 .text {
     text-align: left;
     width: 70%;
-    margin: 5rem 3rem 4rem 3rem;
+    margin: 5rem 3rem 3rem 3rem;
 }
 
 .text p:nth-child(1) {
