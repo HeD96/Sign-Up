@@ -164,7 +164,7 @@ input::-webkit-inner-spin-button {
 }
 
 input:focus {
-    outline: 1px solid rgba(28, 28, 252, 0.466);
+    outline: 1px solid rgba(28, 28, 252, 0.336);
 }
 
 input:invalid {
@@ -182,4 +182,12 @@ a {
 
 .error {
     outline: 1px solid rgba(255, 0, 0, 0.411);
+}
+
+.valid {
+    outline: 1px solid rgba(0, 128, 0, 0.466);
+}
+
+form label {
+    pointer-events: none;
 }
