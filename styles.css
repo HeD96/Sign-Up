@@ -154,6 +154,7 @@ input {
 
     font-family: "Fira Sans", sans-serif;
     font-size: 1rem;
+    color: rgb(58, 58, 58)
 }
 
 input::-webkit-outer-spin-button,
@@ -177,4 +178,8 @@ input:invalid {
 a {
     text-decoration: none;
     color: rgb(77, 117, 77);
+}
+
+.error {
+    outline: 1px solid rgba(255, 0, 0, 0.411);
 }
