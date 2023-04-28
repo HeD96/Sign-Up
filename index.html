@@ -17,8 +17,8 @@
         <div class="main_sec">
             <div class="head">
                 <div class="text">
-                    <p>You know you need something like this in your life to help you realize your deepest dreams. Sign up <i>now</i> to get started.</p>
-                    <p>You <i>know</i> you want to!</p>
+                    <p>You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</p>
+                    <p>You <b>know</b> you want to!</p>
                 </div>
             </div>
             <div class="signup_sec">
@@ -26,33 +26,35 @@
                 <form class="basic_form" action="">
                     <div class="inp">
                         <label for="first_name">First Name</label>
-                        <input id="first_name" type="text">
+                        <input class="name" id="first_name" type="text">
                     </div>
                     <div class="inp">
                         <label for="last_name">Last Name</label>
-                        <input id="last_name" type="text">
+                        <input class="name" id="last_name" type="text">
                     </div>
                     <div class="inp">
                         <label for="email">Email</label>
-                        <input id="email" type="text">
+                        <input id="email" type="email" placeholder="email@mail.com">
                     </div>
                     <div class="inp">
                         <label for="phone_num">Phone Number</label>
-                        <input id="phone_num" type="text">
+                        <input id="phone_num" type="number">
                     </div>
                     <div class="inp">
                         <label for="password">Password</label>
-                        <input id="password" type="text">
+                        <input id="password" type="password">
                     </div>
                     <div class="inp">
                         <label for="confirm">Confirm Password</label>
-                        <input id="confirm" type="text">
+                        <input id="confirm" type="password">
                     </div>
+
+                    <button id="create_acc" type="submit"></button>
                 </form>
             </div>
             <div class="foot">
                 <div class="wrap">
-                    <button class="create_acc" type="submit">Create Account</button>
+                    <label class="create_acc" for="create_acc">Create Account</label>
                     <p>Already have an account? <a href="">Log in</a></p>
                 </div>
             </div>
