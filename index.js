@@ -61,8 +61,24 @@ function EmailValidation() {
 
 //name validation
 
-function NameValidation() {
+firstName.addEventListener("keyup", NameValidation);
+lastName.addEventListener("keyup", NameValidation);
 
-}
+function NameValidation() {
+    let validRegex = /[a-zA-Z]+$/;
+
+    console.log(firstName.value);
+
+    if (validRegex.test(firstName.value)) {
+        firstName.classList.add("valid");
+        firstName.classList.remove("error");
+    }
+
+    if (!validRegex.test(firstName.value)) {
+        firstName.classList.add("error");
+        firstName.classList.remove("valid");
+    }
+        
+    }
 
 
