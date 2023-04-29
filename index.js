@@ -12,7 +12,7 @@ let email = document.getElementById("email");
 let phoneNum = document.getElementById("phone_num");
 
 
-//phone number formatting
+//phone number validation
 
 phoneNum.addEventListener("focus", function() {
     if (phoneNum.value === "") {
@@ -21,7 +21,7 @@ phoneNum.addEventListener("focus", function() {
 });
 
 
-//password matching
+//password validation
 
 password.addEventListener("keyup", function() {
     if (password_confirm.value !== "") {
@@ -48,6 +48,21 @@ function CheckPassword() {
     }
 }
 
+//email validation
 
+email.addEventListener("keyup", EmailValidation);
+
+function EmailValidation() {
+    let validRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    if (validRegex.test(email.value)) {
+        email.classList.add("valid");
+    }
+}
+
+//name validation
+
+function NameValidation() {
+
+}
 
 
