@@ -14,11 +14,66 @@ let phoneNum = document.getElementById("phone_num");
 
 //phone number validation
 
-phoneNum.addEventListener("focus", function() {
+let toggle_one = false;
+let toggle_two = false;
+let toggle_three = false;
+
+// phoneNum.addEventListener("focus", function() {
+//     if (phoneNum.value === "") {
+//         phoneNum.value = "+7 ";
+//     }
+// });
+
+phoneNum.addEventListener("keydown", function() {
     if (phoneNum.value === "") {
         phoneNum.value = "+7 ";
     }
 });
+
+phoneNum.addEventListener("keyup", PhoneValidation);
+
+function PhoneValidation() {
+    let validRegex = /[+7]\s[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}/;
+
+    if (validRegex.test(phoneNum.value)) {
+        phoneNum.classList.add("valid");
+        phoneNum.classList.remove("error");
+    }
+
+    if (!validRegex.test(phoneNum.value)) {
+        phoneNum.classList.add("error");
+        phoneNum.classList.remove("valid");
+    } 
+
+    // if (phoneNum.value.length === 6 || phoneNum.value.length === 10 || phoneNum.value.length === 13) {
+    //     phoneNum.value += "-";
+    // }
+
+    if (phoneNum.value.length === 2) {
+        phoneNum.value += " ";
+    }
+
+    if (phoneNum.value.length === 6 && toggle_one === false) {
+        phoneNum.value += "-";
+        toggle_one = true;
+    } else if (phoneNum.value.length < 6) {
+        toggle_one = false;
+    }
+
+    if (phoneNum.value.length === 10 && toggle_two === false) {
+        phoneNum.value += "-";
+        toggle_two = true;
+    } else if (phoneNum.value.length < 10 && phoneNum.value.length > 6) {
+        toggle_two = false;
+    }
+
+    if (phoneNum.value.length === 13 && toggle_three === false) {
+        phoneNum.value += "-";
+        toggle_three = true;
+    } else if (phoneNum.value.length < 13 && phoneNum.value.length > 10) {
+        toggle_three = false;
+    }
+}
 
 
 //password validation
@@ -54,17 +109,24 @@ email.addEventListener("keyup", EmailValidation);
 
 function EmailValidation() {
     let validRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
     if (validRegex.test(email.value)) {
+        email.classList.remove("error");
         email.classList.add("valid");
+    }
+
+    if (!validRegex.test(email.value)) {
+        email.classList.remove("valid");
+        email.classList.add("error");
     }
 }
 
 //name validation
 
-firstName.addEventListener("keyup", NameValidation);
-lastName.addEventListener("keyup", NameValidation);
+firstName.addEventListener("keyup", FNameValidation);
+lastName.addEventListener("keyup", LNameValidation);
 
-function NameValidation() {
+function FNameValidation() {
     let validRegex = /[a-zA-Z]+$/;
 
     console.log(firstName.value);
@@ -77,8 +139,21 @@ function NameValidation() {
     if (!validRegex.test(firstName.value)) {
         firstName.classList.add("error");
         firstName.classList.remove("valid");
+    }  
+}
+
+function LNameValidation() {
+    let validRegex = /[a-zA-Z]+$/;
+
+    if (validRegex.test(lastName.value)) {
+        lastName.classList.add("valid");
+        lastName.classList.remove("error");
     }
-        
+
+    if (!validRegex.test(lastName.value)) {
+        lastName.classList.add("error");
+        lastName.classList.remove("valid");
     }
+}
 
 

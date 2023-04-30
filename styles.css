@@ -35,6 +35,21 @@ body {
     flex: 35%;
     background-image: url(images/museum-of-new-zealand-te-papa-tongarewa-d7n2ON304-8-unsplash.jpg);
     background-size: 130%;
+    min-height: 100vh;
+}
+
+.logo_background {
+    width: 100%;
+    height: 15%;
+    background-color: rgba(32, 32, 32, 0.795);
+    position: relative;
+    top: 12.5%;
+}
+
+.logo_image {
+    width: 100%;
+    left: 0.6rem;
+    position: relative;
 }
 
 .main_sec {
@@ -154,7 +169,7 @@ input::-webkit-inner-spin-button {
 }
 
 input:focus {
-    outline: 1px solid rgba(28, 28, 252, 0.336);
+    outline: 2px solid rgba(100, 100, 255, 0.404);
 }
 
 /* input validation */
@@ -199,3 +214,4 @@ a {
 form label {
     pointer-events: none;
 }
+
