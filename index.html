@@ -1,68 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-Up Form</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="index.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="wrapper">
-        <div class="logo">
-            <div class="logo_background">
-                <img class="logo_image" src="images/odin.png" alt="odin-logo">
-            </div>
-        </div>
-        <div class="main_sec">
-            <div class="head">
-                <div class="text">
-                    <p>You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</p>
-                    <p>You <b>know</b> you want to!</p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign-Up Form</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto&display=swap"
+            rel="stylesheet"
+        />
+        <script src="index.js" defer></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="logo_section">
+                <div class="logo_background">
+                    <img
+                        class="logo_image"
+                        src="images/odin.png"
+                        alt="odin-logo"
+                    />
                 </div>
             </div>
-            <div class="signup_sec">
-                <p>Let's do this!</p>
-                <form class="basic_form" action="">
-                    <div class="inp">
-                        <label for="first_name">First Name</label>
-                        <input class="name" id="first_name" type="text">
+            <div class="main_section">
+                <div class="head">
+                    <div class="text">
+                        <p>
+                            You know you need something like this in your life
+                            to help you realize your deepest dreams. Sign up now
+                            to get started.
+                        </p>
+                        <p>You <b>know</b> you want to!</p>
                     </div>
-                    <div class="inp name_check">
-                        <label for="last_name">Last Name</label>
-                        <input class="name" id="last_name" type="text">
+                </div>
+                <div class="signup_section">
+                    <p>Let's do this!</p>
+                    <form class="basic_form" action="">
+                        <div class="inp">
+                            <label for="first_name">First Name</label>
+                            <input class="name" id="first_name" type="text" />
+                        </div>
+                        <div class="inp name_check">
+                            <label for="last_name">Last Name</label>
+                            <input class="name" id="last_name" type="text" />
+                        </div>
+                        <div class="inp">
+                            <label for="email">Email</label>
+                            <input
+                                id="email"
+                                type="email"
+                                placeholder="email@mail.com"
+                            />
+                        </div>
+                        <div class="inp">
+                            <label for="phone_num">Phone Number</label>
+                            <input
+                                id="phone_num"
+                                type="tel"
+                                maxlength="16"
+                                placeholder="+7 ***-**-**"
+                            />
+                        </div>
+                        <div class="inp pass_check">
+                            <label for="password">Password</label>
+                            <input class="pass" id="password" type="password" />
+                            <label
+                                class="invisible"
+                                id="error_message"
+                                for="password"
+                                >* Passwords do not match</label
+                            >
+                        </div>
+                        <div class="inp">
+                            <label for="confirm">Confirm Password</label>
+                            <input
+                                class="pass confirm_pass"
+                                id="confirm"
+                                type="password"
+                            />
+                        </div>
+                        <button id="create_acc" type="submit"></button>
+                    </form>
+                </div>
+                <div class="foot">
+                    <div class="wrap">
+                        <label class="create_acc" for="create_acc"
+                            >Create Account</label
+                        >
+                        <p>Already have an account? <a href="">Log in</a></p>
                     </div>
-                    <div class="inp">
-                        <label for="email">Email</label>
-                        <input id="email" type="email" placeholder="email@mail.com">
-                    </div>
-                    <div class="inp">
-                        <label for="phone_num">Phone Number</label>
-                        <input id="phone_num" type="tel" maxlength="16" placeholder="+7 ***-**-**">
-                    </div>
-                    <div class="inp pass_check">
-                        <label for="password">Password</label>
-                        <input class="pass" id="password" type="password">
-                        <label class="invisible" id="error_message" for="password">* Passwords do not match</label>
-                    </div>
-                    <div class="inp">
-                        <label for="confirm">Confirm Password</label>
-                        <input class="pass confirm_pass" id="confirm" type="password">
-                    </div>
-                    <button id="create_acc" type="submit"></button>
-                </form>
-            </div>
-            <div class="foot">
-                <div class="wrap">
-                    <label class="create_acc" for="create_acc">Create Account</label>
-                    <p>Already have an account? <a href="">Log in</a></p>
                 </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>

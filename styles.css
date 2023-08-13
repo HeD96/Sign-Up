@@ -31,7 +31,7 @@ body {
     flex-direction: row;
 }
 
-.logo {
+.logo_section {
     flex: 35%;
     background-image: url(images/museum-of-new-zealand-te-papa-tongarewa-d7n2ON304-8-unsplash.jpg);
     background-size: 130%;
@@ -52,7 +52,7 @@ body {
     position: relative;
 }
 
-.main_sec {
+.main_section {
     flex: 65%;
 
     display: flex;
@@ -79,14 +79,14 @@ body {
     margin-bottom: 2rem;
 }
 
-.signup_sec {
+.signup_section {
     flex: 30%;
     z-index: 2;
 
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.089);
 }
 
-.signup_sec p {
+.signup_section p {
     font-size: 1.3rem;
     font-weight: bold;
 
@@ -159,13 +159,13 @@ input {
 
     font-family: "Fira Sans", sans-serif;
     font-size: 1rem;
-    color: rgb(58, 58, 58)
+    color: rgb(58, 58, 58);
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 input:focus {
@@ -214,4 +214,3 @@ a {
 form label {
     pointer-events: none;
 }
-
